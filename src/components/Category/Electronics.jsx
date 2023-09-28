@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { TabTitle } from "../../Utilities/TabTitle";
 import { getElectronics } from "../../API/Electronics";
 import AddToCart from "../AddToCart";
-import Sort from "../Sort";
-
 
 export default function Electronics() {
   const [electronics, setElectronics] = useState([]);
@@ -40,7 +38,6 @@ export default function Electronics() {
     <>
       {loading && <p>Loading...</p>}
       {error && <p>Something went wrong...</p>}
-      <Sort />
       {electronics.map((product) => (
         <div className="card" key={product.id}>
           <div
