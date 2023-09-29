@@ -27,7 +27,7 @@ export default function Login({ setToken }) {
       localStorage.setItem("handle_token", JSON.stringify(token));
       setToken(token);
 
-
+      location('/')
 
       console.table(data);
 
@@ -43,12 +43,7 @@ export default function Login({ setToken }) {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Something went wrong: {error.message}</p>;
   
-  const root = () => {
-    if (data) {
-      location('/');
 
-    }
-  }
 
 
 
