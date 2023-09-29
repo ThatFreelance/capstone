@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { TabTitle } from "../../Utilities/TabTitle";
 import { getJewelry } from "../../API/Jewelry";
 import AddToCart from "../AddToCart";
-import Sort from "../Sort";
 
 export default function Jewelry() {
   const [jewelry, setJewelry] = useState([]);
@@ -40,7 +39,6 @@ export default function Jewelry() {
     <>
     {loading && <p>Loading...</p>}
       {error && <p>Something went wrong...</p>}
-      <Sort />
       {jewelry.map((product) => (
         <div className="card" key={product.id}>
           <div            
